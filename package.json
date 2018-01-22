@@ -1,8 +1,9 @@
 {
-  "name": "@the-tab/the-tab-module-bookmarks",
-  "version": "1.0.0",
-  "description": "Bookmarks module for The Tab",
-  "main": "./dist/the-tab-module-bookmarks.js",
+  "name": "@the-tab/the-tab-core-bookmarks",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Bookmarks core module of The Tab",
+  "main": "./dist/the-tab-core-bookmarks.js",
   "scripts": {
     "watch": "node_modules/.bin/webpack --watch --colors",
     "build": "node_modules/.bin/cross-env NODE_ENV=production node_modules/.bin/webpack --progress",
@@ -10,6 +11,13 @@
   },
   "author": "the-tab",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-tab/the-tab-core-bookmarks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-tab/the-tab-core-bookmarks/issues"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",

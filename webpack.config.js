@@ -4,10 +4,10 @@ const path = require('path');
 const config = {
   entry: './src',
   output: {
-    library: 'the-tab-module-bookmarks',
+    library: 'the-tab-core-bookmarks',
     libraryTarget: 'umd',
     path: path.join(__dirname, 'dist'),
-    filename: 'the-tab-module-bookmarks.js',
+    filename: 'the-tab-core-bookmarks.js',
   },
   devtool: 'cheap-module-source-map',
   module: {

@@ -1,7 +1,7 @@
 {
   "name": "@the-tab/the-tab-core-bookmarks",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bookmarks core module of The Tab",
   "main": "./dist/the-tab-core-bookmarks.js",
   "scripts": {

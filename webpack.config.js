@@ -15,15 +15,21 @@ const config = {
       {
         test: /.jsx?$/,
         exclude: /\/node_modules\//,
-        loader: 'babel-loader',
-      }, {
-        test: /\.less/,
-        loaders: ['style-loader', 'css-loader', 'less-loader'],
+        loaders: ['babel-loader']
       },
-    ],
+      {
+        test: /.less/,
+        loaders: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            modules: true,
+          }
+        }, 'less-loader']
+      }
+    ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.less'],
   },
   plugins: [],
 };

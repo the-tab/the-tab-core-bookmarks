@@ -1,7 +1,7 @@
 {
   "name": "@the-tab/the-tab-core-bookmarks",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Bookmarks core module of The Tab",
   "main": "./dist/the-tab-core-bookmarks.js",
   "scripts": {
@@ -39,6 +39,7 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }

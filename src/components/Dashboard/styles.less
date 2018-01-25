@@ -26,8 +26,8 @@
   .itemContainer {
     flex: 1;
 
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 80px;
+    min-height: 80px;
     padding: 15px;
 
 
@@ -58,8 +58,8 @@
     }
 
     .icon {
-      width: 60px;
-      height: 60px;
+      width: 35px;
+      height: 35px;
 
       border-radius: 6px;
       background: white;
@@ -70,6 +70,27 @@
 
       font-size: 18px;
       color: rgba(0,0,0,.78);
+    }
+
+    .image {
+      width: 30px;
+      height: 30px;
+
+      border-radius: 6px;
+      background: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 18px;
+      color: rgba(0,0,0,.78);
+      overflow: hidden;
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .title {

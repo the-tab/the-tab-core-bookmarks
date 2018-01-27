@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './styles.less';
 
 const Item = ({
-  url, title, isFolder, ...props
+  url, title, icon, isFolder, ...props
 }) => {
   if (isFolder) {
     return (
@@ -13,18 +13,12 @@ const Item = ({
       </a>
     );
   } else {
-    const { meta = {} } = props;
-
     return (
       <a href={url} className={`${styles.itemContainer} fadeIn animated`}>
         <div
-          className={meta.image ? styles.image : styles.icon}
+          className={styles.image}
         >
-          {
-          meta.image
-          ? <img src={meta.image} alt={title.charAt(0).toUpperCase()} />
-          : title.charAt(0).toUpperCase()
-        }
+          <img src={icon} className="fadeIn animated" />
         </div>
         <div className={styles.title}>{ title }</div>
       </a>

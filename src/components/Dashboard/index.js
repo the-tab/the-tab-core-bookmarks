@@ -24,6 +24,7 @@ export default class Dashobard extends Component {
                 isFolder={!!item.children}
                 key={item.id}
                 goToFolder={this.goToFolder}
+                onLongPress={console.log}
               />
             ))
           }

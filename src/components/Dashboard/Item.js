@@ -1,5 +1,6 @@
 import React from 'react';
 
+import LongPress from '../LongPress';
 import styles from './styles.less';
 
 const Item = ({
@@ -7,21 +8,29 @@ const Item = ({
 }) => {
   if (isFolder) {
     return (
-      <a className={[styles.itemContainer, styles.folder, 'fadeIn animated'].join(' ')} onClick={() => props.goToFolder(props.children)}>
+      <LongPress
+        htmlElement="div"
+        className={[styles.itemContainer, styles.folder, 'fadeIn animated'].join(' ')}
+        onClick={() => props.goToFolder(props.children)}
+        onLongPress={props.onLongPress}
+      >
         <div className={styles.icon}>{ title.charAt(0).toUpperCase() }</div>
         <div className={styles.title}>{ title }</div>
-      </a>
+      </LongPress>
     );
   } else {
     return (
-      <a href={url} className={`${styles.itemContainer} fadeIn animated`}>
-        <div
-          className={styles.image}
-        >
+      <LongPress
+        htmlElement="a"
+        href={url}
+        className={`${styles.itemContainer} fadeIn animated`}
+        onLongPress={props.onLongPress}
+      >
+        <div className={styles.image}>
           <img src={icon} className="fadeIn animated" />
         </div>
         <div className={styles.title}>{ title }</div>
-      </a>
+      </LongPress>
     );
   }
 };
